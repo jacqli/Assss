@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Assss</string>
+
+    <string-array name="produtos">
+       <item>bolo</item>
+        <item>salgado</item>
+        <item>pacoca</item>
+        <item>refrigerante</item>
+
+    </string-array>
 </resources>

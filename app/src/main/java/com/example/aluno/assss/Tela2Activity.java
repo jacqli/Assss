@@ -1,5 +1,6 @@
 package com.example.aluno.assss;
 
+import android.annotation.SuppressLint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
@@ -23,14 +24,20 @@ public class Tela2Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-list.add("salgado");
-        list.add("refrigerante");
-        list.add("bolo");
-        list.add("pacoca");
+
+
         add = (Button) findViewById(R.id.bEntrar);
         fechar = (Button) findViewById(R.id.bAdd);
         textItens = (TextView) findViewById(R.id.textItens);
         itens = (Spinner) findViewById(R.id.itens);
+
+        list.add("salgado");
+        list.add("refrigerante");
+        list.add("bolo");
+        list.add("pacoca");
+        @SuppressLint("ResourceType") ArrayAdapter<CharSequence> dataAdapter = new ArrayAdapter<CharSequence>(this ,android.R.layout.simple_spinner_item,R.array.produtos);
+       //dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        //itens.setAdapter(dataAdapter);
      //   ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, , android.R.layout.simple_spinner_item);
 
 
