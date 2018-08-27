@@ -8,19 +8,20 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-private Button entrar;
+private Button enterar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        entrar = (Button) findViewById(R.id.bEntrar);
+        enterar = (Button) findViewById(R.id.ent2);
 
-        entrar.setOnClickListener(new View.OnClickListener() {
+
+        enterar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            startActivity(new Intent(MainActivity.this , Tela2Activity.class));
+                startActivity(new Intent(MainActivity.this , testeActivity.class));
             }
         });
     }
