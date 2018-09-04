@@ -22,6 +22,8 @@ private Button enterar;
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this , testeActivity.class));
+                Intent a = new Intent(MainActivity.this , testeActivity.class);
+                a.putExtra("as", 12);
             }
         });
     }
