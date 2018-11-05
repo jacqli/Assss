@@ -6,12 +6,21 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.orm.SchemaGenerator;
+import com.orm.SugarContext;
+import com.orm.SugarDb;
+
 public class MainActivity extends AppCompatActivity {
 
 private Button enterar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        SugarContext.init(getApplicationContext());
+        SchemaGenerator schemaGenerator = new SchemaGenerator(this);
+        schemaGenerator.createDatabase(new SugarDb(this).getDB());
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
