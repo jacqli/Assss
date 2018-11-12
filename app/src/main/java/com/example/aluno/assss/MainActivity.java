@@ -13,6 +13,7 @@ import com.orm.SugarDb;
 public class MainActivity extends AppCompatActivity {
 
 private Button enterar;
+    private Button cadastro;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,7 @@ private Button enterar;
         setContentView(R.layout.activity_main);
 
         enterar = (Button) findViewById(R.id.ent2);
+        cadastro = (Button) findViewById(R.id.cad);
 
 
         enterar.setOnClickListener(new View.OnClickListener() {
@@ -32,6 +34,15 @@ private Button enterar;
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this , testeActivity.class));
                 Intent a = new Intent(MainActivity.this , testeActivity.class);
+                a.putExtra("as", 12);
+            }
+        });
+
+        cadastro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this , cadProActivity.class));
+                Intent a = new Intent(MainActivity.this , cadProActivity.class);
                 a.putExtra("as", 12);
             }
         });

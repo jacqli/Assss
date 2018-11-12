@@ -32,7 +32,9 @@
             android:value="com.example.aluno.assss" />
 
         <activity android:name=".testeActivity" />
-        <activity android:name=".cadProActivity"></activity>
+        <activity android:name=".cadProActivity" />
+        <activity android:name=".listaActivity" />
+        <activity android:name=".lista2Activity"></activity>
     </application>
 
 </manifest>
