@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
 private Button enterar;
     private Button cadastro;
-
+ private Button lista;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -27,6 +27,7 @@ private Button enterar;
 
         enterar = (Button) findViewById(R.id.ent2);
         cadastro = (Button) findViewById(R.id.cad);
+        lista = (Button) findViewById(R.id.btnLPro);
 
 
         enterar.setOnClickListener(new View.OnClickListener() {
@@ -43,6 +44,14 @@ private Button enterar;
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this , cadProActivity.class));
                 Intent a = new Intent(MainActivity.this , cadProActivity.class);
+                a.putExtra("as", 12);
+            }
+        });
+        lista.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this , lista2Activity.class));
+                Intent a = new Intent(MainActivity.this , lista2Activity.class);
                 a.putExtra("as", 12);
             }
         });

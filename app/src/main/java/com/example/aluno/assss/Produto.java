@@ -16,6 +16,11 @@ public class Produto extends SugarRecord {
 
     }
 
+  /*  @Override
+    public String toString(){
+    return ("nome: " + getNome() +"Valor: " + getPreco());
+    }*/
+
     public String getNome() {
         return nome;
     }

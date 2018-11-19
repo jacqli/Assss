@@ -20,7 +20,13 @@ public class lista2Activity extends AppCompatActivity {
         lista = (ListView) findViewById(R.id.listaVer);
 
         List<Produto> produtos = Produto.listAll(Produto.class);
+        String[] nomes = new String[produtos.size()];
 
-        //ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, produtos);
+        for (int i = 0; i < produtos.size(); i++) {
+        nomes[i] = produtos.get(i).getNome() + " valor: "+ produtos.get(i).getPreco();
+        }
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, nomes);
+        lista.setAdapter(adapter);
     }
 }
